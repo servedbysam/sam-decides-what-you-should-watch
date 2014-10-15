@@ -5,31 +5,47 @@
 	<meta charset="UTF-8">
 	<title>Be the best couch potato</title>
 	<link href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.css" rel="stylesheet">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="js/scripts.js"></script>
 	<link href="css/styles.css" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<!-- I think using Bootstrap to create the sections is gonna be super helpful. So thanks for the intro on Monday, Ryan! 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> -->
 </head>
 
 <body>
 	<h2>What should you watch tonight?</h2>
 
+	<div class="questionaire">
+	<form name="quiz" action="javascript:finish();">
 	<p class="question">What day is it?</p>
-		<button id="mon">Monday</button>
-		<button id="tue">Tuesday</button>
-		<button id="wed">Wednesday</button>
-		<button id="thur">Thursday</button>
-		<button id="fri">Friday</button>
-		<button id="sun">Sunday</button>
+			<input type="radio" name="question_1" value="1, 2, 3, 4">  Monday<br>
+			<input type="radio" name="question_1" value="5, 6, 7, 8">  Tuesday<br>
+			<input type="radio" name="question_1" value="9, 10, 11">  Wednesday<br>
+			<input type="radio" name="question_1" value="12, 13">  Thursday<br>
+			<input type="radio" name="question_1" value="14, 15, 16">  Friday<br>
+			<input type="radio" name="question_1" value="17, 18, 19">  Sunday<br>
 	<p class="question">What are you in the mood for?</p>
-		<button id="sitcom">I want to laugh.</button>
-		<button id="drama">Something dramatic, like my life.</button>
-	<p class="question">When do you want to watch?</p>
-		<button id="early">I'm old. I go to bed early.</button>
-		<button id="late">My job sucks, so I won't be home 'til late.</button>
+			<input type="radio" name="question_2" value="3, 4, 7, 8, 10, 11, 13, 16, 19">  I want to laugh.<br>
+			<input type="radio" name="question_2" value="1, 2, 5, 6, 9, 12, 14, 15, 17, 18">  Something dramatic and exciting.<br>
+	<p class="question">When do you watch your programs?</p>
+		<form action="">
+			<input type="radio" name="question_3" value="1, 3, 5, 7, 10, 12, 13, 14, 16, 17, 19">  I'm old. I go to bed early.<br>
+			<input type="radio" name="question_3" value="2, 4, 6, 8, 9, 11, 12, 13, 15, 16, 18, 19">  My job sucks, so I won't be home 'til late.<br>
 	<p class="question">Have you given up cable yet?</p>
-		<button id="cable">FROM MY COLD, DEAD HANDS.</button>
-		<button id="network">Does that still exist?</button>
+			<input type="radio" name="question_4" value="1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19">  FROM MY COLD, DEAD HANDS.<br>
+			<input type="radio" name="question_4" value="1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19">  Does that still exist?<br>
 
-	<button id="tabulate">ENTERTAIN ME!</button>
+	<input type="submit" value="Finish">
+	</form>
+
+	 <ul id="results">
+        <li class="results-inner">
+            <p>Watch</p>
+         	<div id="result"></div>
+        </li>
+    </ul>
+	</div>
 
 	<!--- I can't decide if the results should be in the javascript or the HTML. I feel like it's a jQuery thing. What do you think? -->
 

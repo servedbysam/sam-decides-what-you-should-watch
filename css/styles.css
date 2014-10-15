@@ -1,12 +1,33 @@
 body {
-	color: #fff;
-	background-color: #606060;
+	color: white;
+	background-color: rgb(10, 152, 178);
 	font-family: 'Raleway', sans-serif;
+}
+
+h2 {
 	text-align: center;
+	color
+}
+
+.question {
+	text-align: center;
+}
+
+.questionaire {
+	margin-left: 33%; 
+	margin-right: 33%;
 }
 
 .hidden {
 	display: none;
+}
+
+button {
+	background-color: rgb(112, 121, 123);
+	color: white;
+	margin-top: 20px;
+	margin-left: 18%;
+
 }
 
 /* i know a z-index is gonna be in play */
